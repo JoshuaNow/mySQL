@@ -2,13 +2,13 @@ CREATE TABLE customers( customer_id INT PRIMARY KEY AUTO_INCREMENT, customer_nam
 
 CREATE TABLE product( product_id INT PRIMARY KEY AUTO_INCREMENT, product_name varchar(50) not null, quantity int );
 
-CREATE TABLE orders (
-      fk_customer_id INT NOT NULL,
-      fk_product_id INT NOT NULL, 
-      quantity INT NOT NULL, 
-      total DEC(10,2) NOT NULL,
-      date_placed DATETIME NOT NULL,
-      PRIMARY KEY (fk_customer_id, fk_product_id, date_placed),
-      FOREIGN KEY (fk_customer_id) REFERENCES customers(customer_id),
-      FOREIGN KEY (fk_product_id) REFERENCES products(product_id)
-);
+CREATE TABLE orders(
+orders_id int auto_increment not null,
+fk_customer_id int not null,
+fk_product_id int not null, 
+date_order datetime not null,
+quantity int not null,
+total decimal(10,2) not null,
+primary key (orders_id),
+foreign key (fk_customer_id) references customer(customer_id),
+foreign key (fk_product_id) references product(product_id));
