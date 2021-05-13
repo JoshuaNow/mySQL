@@ -23,3 +23,12 @@ select name from city where district="Zuid-holland";
 select * from city where population > 1000000;
 select * from city order by district DESC limit 5;
 select name from city where district="Zuid-holland" order by name;
+
+select * from country;
+
+select * from country co join city ci on co.code = ci.countrycode;
+select * from country co join city ci on co.code = ci.countrycode;
+
+describe customer;
+
+insert into customer(customer_name,customer_email,join_date) VALUES("Josh Lopez" , "jlo@yahoo.com" , now());

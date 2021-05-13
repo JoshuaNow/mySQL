@@ -31,3 +31,12 @@ SELECT * FROM my_table WHERE name='Alan';
 
 # USE THIS COMMAND TO DISABLE SAFE MODE 
 SET SQL_SAFE_UPDATES=0;
+
+
+
+-- example 
+insert into customer(customer_name,customer_email,join_date) VALUES("Josh Lopez" , "jlo@yahoo.com" , now());
+insert into customer(customer_name,customer_email,join_date) VALUES("kay" , "kay@yahoo.com" , now());
+insert into customer(customer_name,customer_email,join_date) VALUES("Ryan" , "cool@yahoo.com" , now());
+insert into customer(customer_name,customer_email,join_date) VALUES("Layne" , "unreal@yahoo.com" , now());
+insert into customer(customer_name,customer_email,join_date) VALUES("Jacob" , "jacob@yahoo.com" , 2021-05-13 08:56:42);
