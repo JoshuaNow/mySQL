@@ -12,3 +12,14 @@ total decimal(10,2) not null,
 primary key (orders_id),
 foreign key (fk_customer_id) references customer(customer_id),
 foreign key (fk_product_id) references product(product_id));
+
+
+use world;
+
+select * from city;
+select name, district from city;
+select name from city where name="kabul";
+select name from city where district="Zuid-holland";
+select * from city where population > 1000000;
+select * from city order by district DESC limit 5;
+select name from city where district="Zuid-holland" order by name;
